@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="The Royal Resonance - Verified Male & Female Profiles for Events. Professional manpower, event staff, and more.">
+  <meta name="keywords" content="event staff, manpower, verified profiles, event management, hiring">
+  <meta name="author" content="The Royal Resonance">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../nlogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../nlogo.png">
+
+  <title>The Royal Resonance</title>
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="The Royal Resonance - Verified Event Staff">
+  <meta property="og:description" content="Professional manpower and verified male & female profiles for your events.">
+  <meta property="og:image" content="https://yourwebsite.com/social-image.png">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Royal Resonance - Verified Event Staff">
+  <meta name="twitter:description" content="Professional manpower and verified male & female profiles for your events.">
+  <meta name="twitter:image" content="https://yourwebsite.com/social-image.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Pulse animation for logo */
+    @keyframes pulseLogo {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+    }
+
+    .animate-pulseLogo {
+      animation: pulseLogo 2s infinite;
+    }
+
+    /* Fade in for dialogue */
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInText {
+      animation: fadeInText 2s ease forwards;
+      animation-delay: 1s;
+    }
+  </style>
+</head>
+
+<body class="bg-white flex items-center justify-center h-screen w-screen">
+
+  <!-- Preloader Container -->
+  <div id="preloader" class="flex flex-col items-center justify-center text-center p-4">
+
+    <!-- Logo -->
+    <img src="../nlogo.png" alt="The Royal Resonance Logo"
+      class="w-24 h-24 sm:w-32 sm:h-32 animate-pulseLogo rounded-lg shadow-lg" />
+
+    <!-- Company Name -->
+    <h1 class="mt-6 text-2xl sm:text-4xl font-extrabold text-slate-800">
+      The Royal <span class="text-yellow-500">Resonance</span>
+    </h1>
+
+    <!-- Dialogue / Message -->
+    <p class="mt-4 text-sm sm:text-lg text-gray-500 animate-fadeInText">
+      Verified Male & Female Profiles at Your Service
+    </p>
+
+    <!-- Optional loading dots -->
+    <div class="flex mt-6 space-x-2">
+      <span class="w-3 h-3 bg-blue-600 rounded-full animate-bounce delay-0"></span>
+      <span class="w-3 h-3 bg-blue-600 rounded-full animate-bounce delay-150"></span>
+      <span class="w-3 h-3 bg-blue-600 rounded-full animate-bounce delay-300"></span>
+    </div>
+  </div>
+
+  <script>
+    // Redirect to main landing page after 5 seconds
+    setTimeout(() => {
+      window.location.href = "main.html"; // Change to your landing page URL
+    }, 5000);
+  </script>
+</body>
+
+</html>

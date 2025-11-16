@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventManpower Solutions - Submit Requirement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+</style>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50">
+    <nav class="flex justify-between items-center px-6 md:px-12 py-4">
+        <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center gap-3">
+                    <img src="logo.png" alt="EventStaff Hire Logo"
+                        class="w-12 h-12 rounded-lg object-cover" />
+                    <div class="hidden sm:block">
+                        <div class="text-lg font-extrabold text-slate-800">
+                            The Royal <span class="text-[#B58E4E]">Resonance</span>
+                        </div>
+
+                        <div class="text-xs text-slate-500 -mt-1">
+                            Verified Male & Female Profiles
+                        </div>
+                    </div>
+                </a>
+                </div>
+
+      <ul class="hidden md:flex space-x-8 font-medium items-center">
+        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li>
+          <button onclick="openQueryForm()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition transform hover:scale-105">
+            Send Query
+          </button>
+        </li>
+      </ul>
+      <div class="md:hidden cursor-pointer" onclick="toggleMenu()">
+        <div class="space-y-1">
+          <div class="w-6 h-[2px] bg-gray-800"></div>
+          <div class="w-6 h-[2px] bg-gray-800"></div>
+          <div class="w-6 h-[2px] bg-gray-800"></div>
+        </div>
+      </div>
+    </nav>
+    <ul id="mobileMenu" class="hidden flex-col bg-white shadow-md p-4 space-y-3 md:hidden">
+      <li><a href="./main.html#header">Home</a></li>
+      <li>
+        <button onclick="openQueryForm()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full w-full">
+          Send Query
+        </button>
+      </li>
+    </ul>
+  </header>
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center text-white h-[400px] md:h-[500px]" style="background-image: url('https://images.squarespace-cdn.com/content/v1/604a246ec98ac75732165334/1669222048321-HPLTC2ZYKDK1BSA98HPS/backdrop-ideas-corporate-events.jpg?format=1500w');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 text-center md:text-left flex flex-col justify-center h-full">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight md:leading-tight mb-4">
+      Post Your <span class="text-yellow-400">Manpower Requirement</span>
+    </h1>
+    <p class="text-sm md:text-base text-gray-200 mb-4 max-w-lg">
+      Fill the form and our team will shortlist <span class="font-semibold">verified profiles</span> (male & female) with strong communication skills and experience relevant to your event.
+    </p>
+    <ul class="text-gray-200 text-xs md:text-sm space-y-1 max-w-md inline-block text-left">
+      <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+        </svg>
+        Verified identity & background checks
+      </li>
+      <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+        </svg>
+        Communication and service skills training
+      </li>
+      <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+        </svg>
+        Flexible hiring: hourly / daily / contract
+      </li>
+      <li class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+        </svg>
+        On-site coordinator available on request
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- Form Section -->
+  <section id="contact" class="py-16 bg-white flex justify-center">
+    <div class="w-full md:w-7/12">
+      <!-- Form Heading -->
+      <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Fill This Form</h2>
+
+      <form id="requirementForm" class="grid gap-3 bg-white p-8 rounded-xl shadow-xl" onsubmit="handleSubmit(event)" novalidate>
+        <label class="text-sm font-medium">Company / Recruiter Name *</label>
+        <input name="company" required type="text" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="Company or Recruiter name" />
+
+        <label class="text-sm font-medium">Contact Person *</label>
+        <input name="contact_person" required type="text" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="Full name" />
+
+        <label class="text-sm font-medium">Email *</label>
+        <input name="email" required type="email" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="you@example.com" />
+
+        <label class="text-sm font-medium">Phone *</label>
+        <input name="phone" required type="tel" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="+91 98765 43210" />
+
+        <label class="text-sm font-medium">Event Type *</label>
+        <select id="eventType" name="event_type" required class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none">
+          <option value="">Select event type</option>
+          <option value="wedding">Wedding / Marriage</option>
+          <option value="corporate">Corporate Party</option>
+          <option value="private">Private Party</option>
+          <option value="conference">Conference / Seminar</option>
+          <option value="concert">Concert / Festival</option>
+          <option value="exhibition">Exhibition</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="text" id="otherEventField" name="other_event" placeholder="Please specify other event" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none hidden" />
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="text-sm font-medium">Event Date *</label>
+            <input name="event_date" required type="date" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" />
+          </div>
+          <div>
+            <label class="text-sm font-medium">Event Location / City *</label>
+            <input name="location" required type="text" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="City / venue" />
+          </div>
+        </div>
+
+        <label class="text-sm font-medium">Staff Gender *</label>
+        <select id="genderSelect" name="gender" required class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="both">Both</option>
+        </select>
+        <div id="maleField" class="hidden">
+          <input type="number" name="male_count" placeholder="Number of Male Staff *" min="1" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+        <div id="femaleField" class="hidden">
+          <input type="number" name="female_count" placeholder="Number of Female Staff *" min="1" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <fieldset class="mt-2 border p-3 rounded-md">
+          <legend class="text-sm font-medium">Select Categories Required</legend>
+          <div class="grid sm:grid-cols-2 gap-2 mt-2 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="waitstaff" class="w-4 h-4" /> Waitstaff / Servers</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="security" class="w-4 h-4" /> Security</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="decor" class="w-4 h-4" /> Decor & Setup</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="tech" class="w-4 h-4" /> Technical Crew</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="ushers" class="w-4 h-4" /> Ushers / Hostesses</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="categories" value="cleaners" class="w-4 h-4" /> Cleaners / Support</label>
+          </div>
+        </fieldset>
+
+        <label class="text-sm font-medium mt-2">Work Description / Type *</label>
+        <textarea name="notes" required rows="4" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="Any details: uniform, ID verification, language, skills..."></textarea>
+
+        <label class="text-sm font-medium mt-2">Additional Information</label>
+        <textarea name="extra_info" rows="3" class="p-3 border rounded-md focus:ring-2 focus:ring-blue-300 outline-none" placeholder="Any extra info / notes"></textarea>
+
+        <div class="flex items-center gap-3 mt-2">
+          <label class="inline-flex items-center gap-2"><input id="agree" type="checkbox" required class="w-4 h-4" /> I confirm this request is genuine and I agree to be contacted.</label>
+        </div>
+
+        <div class="mt-3 flex gap-3">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-blue-700 transition transform hover:scale-105">Submit Requirement</button>
+          <button type="reset" class="border px-6 py-3 rounded-md">Reset</button>
+        </div>
+
+        <p id="formMsg" class="text-sm text-green-600 hidden mt-2">Thank you! Your request has been submitted (demo — no backend attached).</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-10 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" class="w-8 h-8" />
+        <span class="font-bold text-lg">EventManpower</span>
+      </div>
+      <p class="text-sm">© 2025 EventManpower Solutions. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    const genderSelect = document.getElementById("genderSelect");
+    const maleField = document.getElementById("maleField");
+    const femaleField = document.getElementById("femaleField");
+    genderSelect.addEventListener("change", () => {
+      const val = genderSelect.value;
+      maleField.classList.toggle("hidden", val !== "male" && val !== "both");
+      femaleField.classList.toggle("hidden", val !== "female" && val !== "both");
+    });
+    const eventType = document.getElementById("eventType");
+    const otherEventField = document.getElementById("otherEventField");
+    eventType.addEventListener("change", () => { otherEventField.classList.toggle("hidden", eventType.value !== "other"); });
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById("formMsg").classList.remove("hidden");
+      e.target.reset();
+      maleField.classList.add("hidden");
+      femaleField.classList.add("hidden");
+      otherEventField.classList.add("hidden");
+    }
+    function openQueryForm() { alert("Callback request form opens here (demo)"); }
+  </script>
+
+</body>
+</html>
