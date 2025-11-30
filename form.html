@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoNearbyU -Hire Labour Easily</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/Media file/logo.png">
+</head>
+<body class="bg-gray-50">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Mobile Hamburger & Logo -->
+        <div class="flex items-center gap-3">
+          <button id="menuBtn" class="text-gray-700 md:hidden focus:outline-none text-2xl">☰</button>
+          <img src="../Media file/l2.png" class="w-10 h-10" alt="Logo">
+          <span class="font-bold text-xl text-blue-600">GoNearbyU</span>
+        </div>
+
+        <!-- Nav Links for Desktop -->
+        <div class="hidden md:flex gap-6 items-center">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="AboutUs.html" class="text-gray-700 hover:text-blue-600 font-medium">About-Us</a>
+        </div>
+
+        <!-- Always visible right button -->
+        <button class="bg-blue-600 text-white px-2 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition shadow-md">Send Requirement</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-white md:hidden text-center">
+      <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hire Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="bg-blue-50 py-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hire Verified services Easily</h1>
+    <p class="text-gray-600 text-lg max-w-xl mx-auto">Door-to-door professional workforce solutions for any event or requirement. Plumbers, electricians, waiters, security, and more—all in one click!</p>
+  </section>
+
+  
+
+  <!-- LABOUR HIRING FORM -->
+<section id="contact" class="bg-gray-100 py-12">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-xl shadow-lg p-10">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Post Your Requirement Now!</h2>
+      
+      <form class="grid gap-4" action="https://submit-form.com/uwkkRZe45" method="POST">
+        <!-- Contact Person -->
+        <label class="text-sm font-medium" for="contact_person">Contact Person Name *</label>
+        <input type="text" id="contact_person" name="contact_person" required placeholder="Full Name"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+
+        <!-- Phone -->
+        <label class="text-sm font-medium" for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+
+        <!-- Requirement Type -->
+        <label class="text-sm font-medium" for="requirement_type">Requirement Type *</label>
+        <select id="requirement_type" name="requirement_type" required
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+          <option value="">Select Labour Type</option>
+          <option value="plumber">Plumber</option>
+          <option value="electrician">Electrician</option>
+          <option value="maid">Maid / Housekeeping</option>
+          <option value="security">Security</option>
+          <option value="security Guard">Security Guard</option>
+          <option value="waiter">Waiter / Staff</option>
+          <option value="technician">Technician</option>
+            <option value="repair">Repair and  Maintenance</option>
+              <option value="lap-p">Laptop/Phone repair</option>
+                <option value="painter">Painter</option>
+                  <option value="labour">Manpower Labour</option>
+                    <option value="crew-team">Crew Team</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Date & City -->
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="text-sm font-medium" for="date">Date *</label>
+            <input type="date" id="date" name="date" required
+              class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+          </div>
+          <div>
+            <label class="text-sm font-medium" for="city">Area / City *</label>
+            <input type="text" id="city" name="city" required placeholder="City / Area"
+              class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+          </div>
+        </div>
+
+        <!-- Pin Code -->
+        <label class="text-sm font-medium" for="pincode">Pin Code *</label>
+        <input type="text" id="pincode" name="pincode" required placeholder="Pin Code"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+
+        <!-- Address -->
+        <label class="text-sm font-medium" for="address">Full Address *</label>
+        <textarea id="address" name="address" required rows="3" placeholder="Full Address"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none"></textarea>
+
+        <!-- Number of Employees -->
+        <label class="text-sm font-medium" for="num_employees">Number of Employees *</label>
+        <input type="number" id="num_employees" name="num_employees" required placeholder="e.g., 5"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+
+        <!-- Purpose -->
+        <label class="text-sm font-medium" for="work_details">Purpose / Work Details (Optional)</label>
+        <input type="text" id="work_details" name="work_details" placeholder="E.g., Plumbing, Electrical Repairs"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none">
+
+        <!-- Additional Info -->
+        <label class="text-sm font-medium" for="additional_info">Additional Information (Optional)</label>
+        <textarea id="additional_info" name="additional_info" rows="3" placeholder="Any notes or requirements"
+          class="p-3 border rounded-md w-full focus:ring-2 focus:ring-blue-300 outline-none"></textarea>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 mt-4">
+          <button type="submit"
+            class="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition shadow-md">
+            Submit
+          </button>
+          <button type="reset"
+            class="border px-5 py-2 rounded-md text-sm hover:bg-gray-100 transition">
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTACT DETAILS SECTION -->
+<section class="bg-blue-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 text-center md:text-left">
+      <!-- Phone -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Phone" class="w-12 h-12 mx-auto md:mx-0">
+        <h3 class="text-xl font-semibold text-gray-800">Phone</h3>
+        <p class="text-gray-600">+91 9599187273, 8178878743</p>
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="w-12 h-12 mx-auto md:mx-0">
+        <h3 class="text-xl font-semibold text-gray-800">Email</h3>
+        <p class="text-gray-600">gonearbyu@gmail.com</p>
+      </div>
+
+      <!-- Addresses -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address" class="w-12 h-12 mx-auto md:mx-0">
+        <h3 class="text-xl font-semibold text-gray-800">Office Locations</h3>
+        <p class="text-gray-600">
+          Palam Clony, Dwarka Sec-3 New Delhi<br>
+          
+        </p>
+      </div>
+
+      <!-- 24/7 Support -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910767.png" alt="Support" class="w-12 h-12 mx-auto md:mx-0">
+        <h3 class="text-xl font-semibold text-gray-800">24/7 Support</h3>
+        <p class="text-gray-600">Call anytime for assistance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-white mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <!-- Logo & Description -->
+        <div class="flex flex-col items-center md:items-start gap-2">
+          <img src="../Media file/logo.png" class="w-10 h-10 mx-auto md:mx-0" alt="Logo">
+          <span class="font-bold text-xl text-blue-600">GoNearbyU</span>
+          <p class="text-gray-600 text-sm">Easily find the nearby services.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="font-semibold mb-2">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+            <li><a href="index.html/#faq" class="hover:text-blue-600">FAQ</a></li>
+            <li><a href="AboutUs.html" class="hover:text-blue-600">About-Us</a></li>
+            <li><a href="index.html/#contact" class="hover:text-blue-600">Contact-Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="font-semibold mb-2">Follow Us</h4>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="https://www.facebook.com/profile.php?id=61583323953479"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-6 h-6" alt="Facebook"></a>
+           
+            <a href="https://www.instagram.com/gonearbyu/?hl=en"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" class="w-6 h-6" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/109659932"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" class="w-6 h-6" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 text-center py-4 text-gray-500 text-sm mt-6">
+        &copy; 2025 GoNearbyU. Ltd. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

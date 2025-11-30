@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About-Us</title>
+
+  <link rel="stylesheet" href="/CSS FILE/AboutUs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/Media file/logo.png">
+
+</head>
+<style>
+  /* Slider basic styling */
+  #catSlider {
+    position: relative;
+    max-width: 100vw;
+    /* slider width slightly smaller than screen width */
+    margin: 0 auto;
+    /* center the slider */
+  }
+
+  .slider-track {
+    position: relative;
+    height: 64vh;
+    /* increase height proportionally for bigger image section */
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: saturate(95%) brightness(90%);
+  }
+
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateX(1.5rem) scale(.95);
+    transition: all 0.8s ease-out;
+    z-index: 10;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+
+
+  .slide .overlay {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: white;
+    max-width: 25rem;
+  }
+
+  .slide .overlay .label {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(59, 130, 246, 0.9);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .slide .overlay h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+
+  .slide .overlay p {
+    font-size: 0.875rem;
+    opacity: 0.95;
+  }
+
+  /* Active slide */
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 20;
+  }
+
+
+  #logoImg {
+    width: 56px;
+
+  }
+</style>
+
+<body>
+
+
+
+  <header id="home">
+    <div class="container header-content">
+      <!-- Hamburger First -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <!-- Then Logo -->
+      <div class="logo">
+        <div class="logo-icon" style="width: 36px;"> <img src="../Media file/logo.png" alt="Logo" id="logoImg"></div>
+        <div class="company-name"> <b style="font-size: 28px; color: blue;">G</b><b
+            style="font-size: 28px; color: green;">o</b><b style="font-size: 28px; color: blue;">Nearby</b><b
+            style="font-size: 28px; color: green;">U</b></div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <!-- <li><a href="#home" class="nav-link">Home</a></li> -->
+          <li><a href="/HTML FILE/index.html" class="nav-link" style="font-size: larger;"><b>Home</b></a></li>
+          <li><a href="#categories" class="nav-link" style="font-size: larger;"><b>Services</b></a></li>
+          <li><a href="#contact" class="nav-link" style="font-size: larger;"><b>Contact</b></a></li>
+        </ul>
+
+      </nav>
+      <button id="search-btn">
+        <a href="form.html">
+          <h3>Post Now</h3>
+        </a>
+      </button>
+
+    </div>
+  </header>
+
+  <div class="scroll-banner" id="user-banner">
+    <div class="scroll-text">
+      ⚠️ Note: Currently, we are serving only specific areas of New Delhi.
+      We apologize for any inconvenience caused. Thank you for your understanding.
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- ✅ HERO SECTION -->
+  <section id="hero" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+
+      <!-- Left Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <img src="../Media file/l2.png" alt="GoNearbyU Logo" class="w-28 mx-auto md:mx-0 mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          Tired of searching for reliable labour, electricians, or event staff?
+        </h1>
+        <p class="text-gray-600 mt-4 text-lg">
+          With <span class="font-semibold text-blue-600">GoNearbyU</span>, finding trusted local helpers is now just a
+          tap away!
+        </p>
+
+        <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
+            Explore Services
+          </a>
+          <a href="#contact"
+            class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg transition">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Image / Graphic -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="../Media file/main-image.jpg" alt="Local Helpers Illustration"
+          class="w-full max-w-md md:max-w-lg rounded-xl shadow-lg hover:scale-105 transition-transform duration-700">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ✅ ABOUT US SECTION -->
+  <section id="about" class="bg-white  px-6">
+    <div class="max-w-6xl mx-auto text-center md:text-left">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">About Us</h2>
+      <div class="flex flex-col md:flex-row items-center gap-10">
+
+        <!-- About Image -->
+        <div class="md:w-1/2">
+          <img src="../Media file/cover.png" alt="GoNearbyU Team"
+            class="rounded-2xl shadow-lg hover:scale-105 transition duration-700">
+        </div>
+
+        <!-- About Text -->
+        <div class="md:w-1/2">
+          <p class="text-gray-600 leading-relaxed mb-4">
+            <strong>GoNearbyU</strong> is your trusted platform connecting people with local, verified professionals.
+            Whether it’s a large-scale event, a business conference, or daily home maintenance —
+            we provide trained and reliable staff tailored to your needs.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            From skilled labourers, electricians, plumbers, and security guards
+            to complete event management and housekeeping services — we ensure seamless operations with quality and
+            trust.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Our mission is to make hiring simple, transparent, and dependable.
+            With just one tap, you can find the right person for every job near you!
+          </p>
+
+          <div class="mt-6">
+            <a href="#categories"
+              class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ✅ OUR FEATURES SECTION -->
+  <section id="features" class="bg-gray-50 py-12 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose G<span style="color: green;">o</span>Nearby<span
+          style="color: green;">U</span></h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+        We bring convenience, reliability, and professional services right to your doorstep — anytime, anywhere.
+      </p>
+
+      <!-- Features Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">⏰</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">24/7 Availability</h3>
+          <p class="text-gray-500 text-xs mt-1">We’re always available — day or night, for any service need.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">🤝</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Reliable Assistance</h3>
+          <p class="text-gray-500 text-xs mt-1">Trained support team ready to help you at every step.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">🧰</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Skilled Labour</h3>
+          <p class="text-gray-500 text-xs mt-1">Professionally verified workers for every kind of task.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">⚡</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Instant Booking</h3>
+          <p class="text-gray-500 text-xs mt-1">Book trusted staff instantly with just one click.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">💼</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">All Event Support</h3>
+          <p class="text-gray-500 text-xs mt-1">From small functions to conferences — we cover all events.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">🔒</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Verified Staff</h3>
+          <p class="text-gray-500 text-xs mt-1">Background-checked professionals for safety and trust.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">📞</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Dedicated Support</h3>
+          <p class="text-gray-500 text-xs mt-1">Quick customer support for all service inquiries.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1">
+          <div class="text-blue-600 text-4xl mb-3">💰</div>
+          <h3 class="font-semibold text-gray-800 text-sm uppercase">Affordable Pricing</h3>
+          <p class="text-gray-500 text-xs mt-1">Competitive prices without compromising on quality.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== Service ========================= -->
+
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Categories</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Browse our most in-demand service categories to find the right skilled worker for your project.
+      </p>
+    </div>
+
+    <!-- Grid: mobile 3 columns, sm 3, md 4, lg 6 -->
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <!-- Category Card Template (repeat) -->
+      <a href="#" class="group" aria-label="Plumbing">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/Plum-man.png" alt="Plumbing icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Plumbing</h3>
+          <p class="text-gray-500 text-xs mt-1">Leaks, installations & repairs</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Electrical">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/electric-2.jpg" alt="Electrical icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Electrical</h3>
+          <p class="text-gray-500 text-xs mt-1">Wiring, lighting & repairs</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Carpentry">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/carpenter-1.jpg" alt="Carpentry icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Carpentry</h3>
+          <p class="text-gray-500 text-xs mt-1">Furniture & home repairs</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Cleaning">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/cleaning.jpg" alt="Cleaning icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Cleaning</h3>
+          <p class="text-gray-500 text-xs mt-1">Home & office cleaning</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Painting">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/painter-man.jpg" alt="Painting icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Painting</h3>
+          <p class="text-gray-500 text-xs mt-1">Walls, furniture & decor</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Beauty and Makeup">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="https://img.freepik.com/premium-vector/makeup-beauty-logo-vector-design_1151527-12661.jpg"
+              alt="Beauty icon" class="w-8 h-8 object-cover" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Beauty & Makeup</h3>
+          <p class="text-gray-500 text-xs mt-1">Makeup & parlour</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Labours">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/10293/10293154.png" alt="Labours icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Labours</h3>
+          <p class="text-gray-500 text-xs mt-1">All types of labour</p>
+        </div>
+      </a>
+
+      <a href="#" class="group" aria-label="Moving and Transport">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="../Media file/transport-2.jpg" alt="Moving icon" class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Moving & Transport</h3>
+          <p class="text-gray-500 text-xs mt-1">Home & office relocation</p>
+        </div>
+      </a>
+
+      
+
+      <!-- NEW: Appliance Repair -->
+      <a href="#" class="group" aria-label="Appliance Repair">
+        <div
+          class="category-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 p-4 text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <div class="p-3 bg-indigo-50 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/2913/2913446.png" alt="Appliance Repair icon"
+              class="w-8 h-8" />
+          </div>
+          <h3 class="font-semibold text-sm sm:text-base text-gray-800">Appliance Repair</h3>
+          <p class="text-gray-500 text-xs mt-1">AC, fridge, TV & more</p>
+        </div>
+      </a>
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+  <!-- ✅ BOOK NOW / ADVERTISING SECTION -->
+  <section id="book-now" class="relative bg-white  px-4">
+    <div
+      class="max-w-6xl mx-auto text-center bg-white rounded-2xl shadow-lg p-10 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+
+      <!-- Headline -->
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-snug">
+        Skilled Labour, Electricians, Plumbers & Event Staff —
+        <span class="text-blue-600">All Available in Just One Click!</span>
+      </h2>
+
+      <!-- Subtext -->
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+        No more searching endlessly for reliable help! GoNearbyU connects you instantly with verified professionals for
+        any work, event, or emergency — fast, easy, and trusted.
+      </p>
+
+      <!-- CTA Button -->
+      <a href="form.html"
+        class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-blue-700 hover:scale-105 transition-transform duration-300">
+        Book Your Helper Now
+      </a>
+
+      <!-- Tagline -->
+      <p class="mt-5 text-sm text-gray-500">Instant Booking • Verified Staff • 24/7 Support • Hassle-Free Service</p>
+    </div>
+  </section>
+
+
+
+  <!--=============== Count Section ================= -->
+  <section class="worker-count-section">
+    <div class="worker-img">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Workers Icon">
+    </div>
+    <div class="worker-text">
+      <h2>Thousands of Workers Trust Us</h2>
+      <p>Join a fast-growing community of reliable and skilled workers ready to serve across the country.</p>
+      <div id="worker-count">0+</div>
+      <div class="worker-label">Workers</div>
+    </div>
+  </section>
+
+
+
+  <!--================================ Partnerships Section =============================-->
+  <section aria-labelledby="partners-title" class="py-4 px-4">
+    <div class="max-w-[1400px] mx-auto flex flex-col gap-6 items-center">
+
+      <!-- Header -->
+      <header class="flex flex-col items-center gap-4 mb-12">
+        <div class="flex items-center gap-4">
+          <img src="../Media file/logo.png" alt="MIA Logo"
+            class="w-16 h-16 object-contain rounded-lg shadow-md p-2 bg-white">
+          <h2 id="partners-title" class="text-2xl md:text-3xl font-bold text-[#0b7285]">Our Trusted Partners
+          </h2>
+        </div>
+        <p class="text-gray-500 text-sm md:text-base mt-2 text-center max-w-lg">
+          We collaborate with top service providers to deliver reliable and verified solutions.
+        </p>
+      </header>
+
+
+
+      <!-- ========================= Partners Flex Container ==============================-->
+      <div class="flex flex-wrap justify-center gap-6 w-full px-2">
+        <!-- Partner Card Example -->
+        <a href="#" 
+          class="bg-white rounded-xl shadow-lg p-5 text-center transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-200 flex flex-col items-center w-[150px] sm:w-[180px] md:w-[200px]">
+          <img src="../Media file/vini.png" alt="GoNearby logo" class="w-10 h-10 object-contain mx-auto mb-3">
+          <h3 class="text-[#0b7285] font-semibold text-lg mb-1">Vini security solutions</h3>
+          <p class="text-gray-700 text-sm hidden md:block">On-demand Manpower solutions.</p>
+        </a>
+
+        <a href="#" 
+          class="bg-white rounded-xl shadow-lg p-5 text-center transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-200 flex flex-col items-center w-[150px] sm:w-[180px] md:w-[200px]">
+          <img src="../Media file/regal.png" alt="FixRight logo" class="w-18 h-18 object-contain mx-auto mb-3">
+          <h3 class="text-[#0b7285] font-semibold text-lg mb-1">The Regal Resonance</h3>
+          <p class="text-gray-700 text-sm hidden md:block">You Event partner.</p>
+        </a>
+
+
+
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+  <!-- Improved Contact Section — Professional, responsive, with Brochure & Privacy PDF downloads -->
+  <section id="contact" class="bg-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <header class="mb-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Contact Information</h2>
+        <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+          Need help booking staff or want to partner with us? Reach our team by email, phone, or visit our office.
+          Download our company brochure or privacy policy below.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Email Card -->
+        <div class="p-6 rounded-xl shadow-sm bg-gray-50 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <!-- envelope icon (inline SVG) -->
+            <svg class="w-10 h-10 text-indigo-600" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21 8.5L12 13 3 8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-800">Email Us</h3>
+              <p class="text-sm text-gray-500">General inquiries & support</p>
+            </div>
+          </div>
+
+          <div class="mt-2">
+            <a href="mailto:contact@gonearbyu.example"
+              class="text-indigo-600 font-medium break-words">gonearbyu@gmail.com</a>
+            <p class="text-xs text-gray-400 mt-1">Typical response within 24 hours</p>
+          </div>
+
+          <div class="mt-3">
+            <a href="mailto:contact@gonearbyu.example?subject=Service%20Inquiry" aria-label="Email us now"
+              class="inline-block px-4 py-2 rounded-md bg-indigo-600 text-white text-sm shadow hover:bg-indigo-700 transition">Send
+              Email</a>
+          </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="p-6 rounded-xl shadow-sm bg-gray-50 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <!-- phone icon -->
+            <svg class="w-10 h-10 text-green-600" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.84.36 1.65.72 2.4a2 2 0 0 1-.45 2.11L8.91 9.91a14 14 0 0 0 6 6l1.68-1.68a2 2 0 0 1 2.11-.45c.75.36 1.56.6 2.4.72A2 2 0 0 1 22 16.92z"
+                stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-800">Call Us</h3>
+              <p class="text-sm text-gray-500">Sales & customer support</p>
+            </div>
+          </div>
+
+          <div class="mt-2">
+            <a href="tel:+919876543210" class="text-gray-800 font-medium text-lg">+91 9599187273,8178878743</a>
+            <p class="text-sm text-gray-500 mt-1">Mon – Sat • 09:00 — 19:00 IST</p>
+          </div>
+
+          <div class="mt-3 flex gap-2">
+            <a href="tel:+919876543210"
+              class="inline-block px-4 py-2 rounded-md border border-green-600 text-green-600 text-sm hover:bg-green-50 transition">Call
+              Now</a>
+            <a href="#contact-form"
+              class="inline-block px-4 py-2 rounded-md bg-green-600 text-white text-sm hover:bg-green-700 transition">Request
+              Callback</a>
+          </div>
+        </div>
+
+        <!-- Visit / Address Card -->
+        <div class="p-6 rounded-xl shadow-sm bg-gray-50 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <!-- map pin icon -->
+            <svg class="w-10 h-10 text-rose-600" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M21 10.5c0 6-9 11.5-9 11.5S3 16.5 3 10.5A9 9 0 0 1 21 10.5z" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="10.5" r="2.5" fill="currentColor" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-800">Visit Us</h3>
+              <p class="text-sm text-gray-500">Head office & customer centre</p>
+            </div>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-600">
+            <div>Palam colony,New Delhi-110045</div>
+            <div class="mt-1">Dwarka Sec-3, New Delhi</div>
+          </div>
+
+          <div class="mt-3 flex gap-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=Business+Plaza+Your+City" target="_blank"
+              rel="noopener"
+              class="inline-block px-4 py-2 rounded-md border border-rose-600 text-rose-600 text-sm hover:bg-rose-50 transition">Open
+              in Maps</a>
+            <a href="#visit-info"
+              class="inline-block px-4 py-2 rounded-md bg-rose-600 text-white text-sm hover:bg-rose-700 transition">Visiting
+              Hours</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Downloads & Quick Links -->
+      <div class="mt-8 border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex gap-3">
+          <a href="GoNearbyU-Brochure.pdf" download
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white text-sm shadow hover:bg-indigo-700 transition"
+            aria-label="Download company brochure (PDF)">
+            <!-- brochure icon -->
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7 2h6l4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor"
+                stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Download Brochure</span>
+          </a>
+
+          <a href="privacy-policy.pdf" download
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm hover:bg-gray-50 transition"
+            aria-label="Download privacy policy (PDF)">
+            <!-- policy icon -->
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2l7 4v6a8 8 0 0 1-8 8 8 8 0 0 1-8-8V6l7-4z" stroke="currentColor" stroke-width="1.4"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Privacy Policy (PDF)</span>
+          </a>
+        </div>
+
+        <div class="text-sm text-gray-500">
+          Prefer direct help? <a href="mailto:contact@gonearbyu.example"
+            class="text-indigo-600 hover:underline">contact@gonearbyu@gmail.com</a> • <a href="tel:+919876543210"
+            class="text-indigo-600 hover:underline">+91 9599187273,8178878743</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========  TESTIMONIAL SECTION (clean, valid, working slider) ==============-->
+
+  <section id="testimonial-section" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Heading -->
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">What People Are Saying</h2>
+        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+          Hear from our satisfied customers and workers who have benefited from GoNearbyUU.
+        </p>
+      </div>
+
+      <!-- Slider -->
+      <div class="relative">
+        <div id="testimonials" class="space-y-6">
+          <!-- Testimonial item (repeat as needed) -->
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Sarah Johnson">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★★</div>
+                <p class="text-gray-700">"Found an excellent plumber within minutes. He was
+                  at my door in under an hour and fixed the leak perfectly. Will use
+                  GoNearbyUU for all my home repairs now!"</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">Sarah Johnson</div>
+                  <div>Nikhil Ranjan, Sagarpur</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md hidden">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Shubham Gupta">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★★</div>
+                <p class="text-gray-700">"Outstanding electrical repair! The technician
+                  arrived promptly, quickly diagnosed the faulty wiring, and completed the
+                  fix safely and professionally."</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">Shubham Gupta</div>
+                  <div>Electrician, Palam, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md hidden">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Sanket Thakur">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★★</div>
+                <p class="text-gray-700">"Used GoNearbyUU to find painters for my new
+                  apartment. Got 3 quotes instantly and could compare ratings. The team
+                  did an amazing job at half the price I was quoted elsewhere!"</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">Sanket Thakur</div>
+                  <div>Plumber, Dwarka Sec-22, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Add more .testimonial-slide blocks (keep only ONE without 'hidden' to be visible initially) -->
+
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md hidden">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Shubham Gupta">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★</div>
+                <p class="text-gray-700">"The cleaning crew did a fantastic job on the main
+                  living areas and the kitchen. The floors looked great. I’m giving 4
+                  stars instead of 5 only because a few high shelves were missed during
+                  the dusting, but otherwise, the house looks wonderful. I will definitely
+                  be booking them again.."</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">Tilak Raj</div>
+                  <div>Housekeeping, Dwarka sec-3, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md hidden">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Shubham Gupta">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★★</div>
+                <p class="text-gray-700">"Go NearbyU did a fantastic job painting our Room &
+                  Hall. They gave us a fair quote, showed up on time, and finished the job
+                  ahead of schedule. The color match was perfect, and the finish looks
+                  great. Highly recommended for anyone needing reliable painters.."</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">santosh Devi</div>
+                  <div>Painter,Sagarpur,New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="testimonial-slide bg-white rounded-xl p-6 shadow-md hidden">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <img class="w-14 h-14 rounded-full object-cover" src="../Media file/1000111027.jpg" alt="Shubham Gupta">
+              </div>
+              <div>
+                <div class="text-sm text-yellow-500 mb-2">★★★★</div>
+                <p class="text-gray-700">"Despite the work being physically demanding and
+                  heavy, they kept up a great pace and never complained. They followed
+                  instructions perfectly and were very careful when moving fragile items
+                  around tight corners. If you need someone who isn't afraid of hard work
+                  and gets the job done fast, I highly recommend GoNearbyU."</p>
+                <div class="mt-4 text-sm text-gray-600">
+                  <div class="font-semibold">Shubham Gupta</div>
+                  <div>Labour, Palam, New Delhi</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-6 flex items-center justify-center gap-4">
+          <button id="prevTestimonial" aria-label="Previous testimonial"
+            class="px-4 py-2 rounded-md bg-white border shadow-sm hover:bg-gray-50">←
+            Prev</button>
+          <button id="nextTestimonial" aria-label="Next testimonial"
+            class="px-4 py-2 rounded-md bg-blue-600 text-white shadow-sm hover:bg-blue-700">Next
+            →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider script -->
+    <script>
+      (function () {
+        const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+        if (!slides.length) return;
+        let idx = 0;
+        const show = (i) => {
+          slides.forEach((s, j) => {
+            s.classList.toggle('hidden', j !== i);
+          });
+        };
+        // initial
+        show(idx);
+
+        // controls
+        document.getElementById('prevTestimonial')?.addEventListener('click', () => {
+          idx = (idx - 1 + slides.length) % slides.length;
+          show(idx);
+          resetAuto();
+        });
+        document.getElementById('nextTestimonial')?.addEventListener('click', () => {
+          idx = (idx + 1) % slides.length;
+          show(idx);
+          resetAuto();
+        });
+
+        // keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') document.getElementById('prevTestimonial')?.click();
+          if (e.key === 'ArrowRight') document.getElementById('nextTestimonial')?.click();
+        });
+
+        // auto-play
+        let auto = setInterval(() => {
+          idx = (idx + 1) % slides.length;
+          show(idx);
+        }, 6000);
+        function resetAuto() {
+          clearInterval(auto);
+          auto = setInterval(() => {
+            idx = (idx + 1) % slides.length;
+            show(idx);
+          }, 6000);
+        }
+      })();
+    </script>
+  </section>
+
+
+
+
+  <!-- -------------------------------------------- FAQ SECTION-------------------------------- -->
+
+  <!-- ========================= FAQ SECTION ========================= -->
+  <section id="faq" class="py-14 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-10">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-4">
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item bg-white border border-gray-200 rounded-xl shadow-sm">
+          <button class="faq-btn w-full p-5 flex justify-between items-center text-left">
+            <span class="text-lg font-semibold text-gray-800">
+              How do I book a professional?
+            </span>
+            <span class="faq-icon text-2xl">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5">
+            <p class="pb-4 text-gray-600">
+              Simply select the service category, choose your preferred expert, and submit the
+              request.
+              Our team connects you instantly with the right professional.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item bg-white border border-gray-200 rounded-xl shadow-sm">
+          <button class="faq-btn w-full p-5 flex justify-between items-center text-left">
+            <span class="text-lg font-semibold text-gray-800">
+              Are your service providers verified?
+            </span>
+            <span class="faq-icon text-2xl">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5">
+            <p class="pb-4 text-gray-600">
+              Yes, all our professionals go through identity verification, background checks,
+              and skill evaluation before being approved.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item bg-white border border-gray-200 rounded-xl shadow-sm">
+          <button class="faq-btn w-full p-5 flex justify-between items-center text-left">
+            <span class="text-lg font-semibold text-gray-800">
+              What if I face an issue during service?
+            </span>
+            <span class="faq-icon text-2xl">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5">
+            <p class="pb-4 text-gray-600">
+              You can contact our support team immediately. We offer replacement professionals
+              and full resolutions depending on the situation.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item bg-white border border-gray-200 rounded-xl shadow-sm">
+          <button class="faq-btn w-full p-5 flex justify-between items-center text-left">
+            <span class="text-lg font-semibold text-gray-800">
+              How do you ensure quality of work?
+            </span>
+            <span class="faq-icon text-2xl">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5">
+            <p class="pb-4 text-gray-600">
+              Each expert is rated after the job. We continuously monitor quality, retrain
+              providers,
+              and remove low-rated professionals from the platform.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <section id="footer">
+    <footer class="bg-gray-800 text-white w-full h-full py-12 px-4 sm:px-10 lg:px-8">
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5f23258f-a62e-4368-bcc6-956f944d28fb.png"
+              alt="Go Nearby Logo" width="40">
+            <span class="ml-2 text-xl font-bold">GoNearbyU</span>
+          </div>
+          <p class="text-gray-300 text-sm">
+            Connecting skilled workers with those who need their services. Fast, reliable, and
+            trustworthy.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white text-sm">Home</a></li>
+            <li><a href="#categories" class="text-gray-300 hover:text-white text-sm">Categories</a></li>
+
+            </li>
+            <li><a href="#about" class="text-gray-300 hover:text-white text-sm">About Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li><a href="#faq" class="text-gray-300 hover:text-white text-sm">FAQs</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white text-sm">Contact Us</a></li>
+            <li><a href="#terms" class="text-gray-300 hover:text-white text-sm">Privacy Policy</a></li>
+            <li><a href="#terms" class="text-gray-300 hover:text-white text-sm">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61583323953479" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gonearbyu/?hl=en" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+
+            <a href="https://www.linkedin.com/company/109659932" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Terms & Policy Section -->
+
+
+
+
+      <div class="footer-suggestion">
+        <h4>Suggestions & Complaints</h4>
+        <p>Have a suggestion or facing an issue?</p>
+        <p><a href="mailto:gonearbyu@gmail.com">Email us here</a></p>
+      </div>
+      </div>
+
+
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2025 GoNearbyU. All rights reserved.</p>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+
+
+
+
+
+
+    function toggleMenu() {
+      document.getElementById("mainNav").classList.toggle("active");
+    }
+
+
+    // Marquee tag Js
+    setTimeout(() => {
+      const banner = document.getElementById("user-banner");
+      banner.style.display = "block";
+
+      // Hide after 5 seconds
+      setTimeout(() => {
+        banner.style.display = "none";
+      }, 10000);
+    }, 5000);
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const workerCountElement = document.getElementById("worker-count");
+      const targetCount = 1500; // Set your target number
+      const speed = 50; // Delay between updates (ms)
+      const step = Math.ceil(targetCount / 150); // Adjust for smoothness
+
+      function startCounter() {
+        let currentCount = 0;
+
+        const interval = setInterval(() => {
+          currentCount += step;
+          if (currentCount >= targetCount) {
+            currentCount = targetCount;
+            workerCountElement.textContent = currentCount.toLocaleString() + "+";
+
+            // Delay, then restart
+            clearInterval(interval);
+            setTimeout(startCounter, 2000); // 2 second pause before restarting
+          } else {
+            workerCountElement.textContent = currentCount.toLocaleString() + "+";
+          }
+        }, speed);
+      }
+
+      // ✅ Call it inside here
+      startCounter();
+    });
+
+
+  </script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
