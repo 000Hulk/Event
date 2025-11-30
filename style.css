@@ -1,0 +1,74 @@
+/* Slider basic styling */
+#catSlider {
+  position: relative;
+  max-width: 100vw; /* slider width slightly smaller than screen width */
+  margin: 0 auto;  /* center the slider */
+}
+
+.slider-track {
+  position: relative;
+  height: 64vh; /* increase height proportionally for bigger image section */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  filter: saturate(95%) brightness(90%);
+}
+
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(1.5rem) scale(.95);
+  transition: all 0.8s ease-out;
+  z-index: 10;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+
+
+.slide .overlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: white;
+  max-width: 25rem;
+}
+
+.slide .overlay .label {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(59,130,246,0.9);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.slide .overlay h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.slide .overlay p {
+  font-size: 0.875rem;
+  opacity: 0.95;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  z-index: 20;
+}
+
+
+/* ================= Work Show Section ============================== */
+
